@@ -1,0 +1,6 @@
+{
+  "name": "claude-code-ager",
+  "version": "0.1.0",
+  "description": "AGER translation plugin for Claude Code",
+  "ager_version": "0.3.0"
+}
