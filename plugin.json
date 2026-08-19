@@ -1,10 +1,11 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "claude-code-ager",
   "version": "0.1.0",
-  "description": "AGER → Claude Code translator. Compile a portable AgentGraph into skills, agents, commands, and hooks.",
+  "description": "Translate a validated AGER/OKF AgentGraph into a Claude Code plugin (skills, agents, commands, hooks).",
   "author": {"name": "Rick Hightower", "url": "https://github.com/RichardHightower"},
   "homepage": "https://github.com/SpillwaveSolutions/claude-code-ager",
   "repository": "https://github.com/SpillwaveSolutions/claude-code-ager",
   "license": "MIT",
-  "keywords": ["ager", "okf", "claude-code", "translator"]
+  "keywords": ["ager", "okf", "claude-code", "codegen", "translator"]
 }

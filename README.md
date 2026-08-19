@@ -1,10 +1,35 @@
 # claude-code-ager
 
-AGER → **Claude Code** plugin (`.claude-plugin`, skills, agents, `/ager-run`).
+AGER → **Claude Code** translator plugin.
+
+Does **not** author graphs. Author and validate with
+[`okf-agent-graph`](https://github.com/SpillwaveSolutions/okf-agent-graph).
+This plugin compiles a validated bundle into a Claude Code plugin
+(skills, agents, commands, hook notes).
+
+## Install
 
 ```bash
-ager-compile --target claude-code --out ./generated
-claude plugin install ./generated
+claude plugin marketplace add SpillwaveSolutions/claude-code-ager
+claude plugin install claude-code-ager@claude-code-ager-marketplace
 ```
 
-Compiler: [ager-translators](https://github.com/SpillwaveSolutions/ager-translators).
+Grok Build loads the Claude plugin layout with zero extra config.
+
+## Use
+
+```
+/ager-to-claude-code
+```
+
+or:
+
+```bash
+python3 scripts/emit.py --bundle path/to/sample-ager --out ./generated/claude-code
+```
+
+Sibling compiler: [`ager-translators`](https://github.com/SpillwaveSolutions/ager-translators).
+
+## License
+
+MIT

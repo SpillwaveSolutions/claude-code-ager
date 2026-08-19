@@ -1,0 +1,6 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-code-ager-marketplace",
+  "owner": {"name": "Rick Hightower", "url": "https://github.com/RichardHightower"},
+  "plugins": [{"name": "claude-code-ager", "source": "./", "description": "AGER → Claude Code translator.", "version": "0.1.0"}]
+}

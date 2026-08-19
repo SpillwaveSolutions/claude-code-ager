@@ -1,0 +1,7 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-code-ager-marketplace",
+  "description": "AGER translation plugins for Claude Code",
+  "owner": {"name": "Rick Hightower", "url": "https://github.com/RichardHightower"},
+  "plugins": [{"name": "claude-code-ager", "source": "./", "description": "Translate AGER/OKF graphs into Claude Code plugins.", "version": "0.1.0", "category": "productivity"}]
+}
