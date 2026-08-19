@@ -1,11 +1,12 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "claude-code-ager",
-  "version": "0.1.0",
-  "description": "Translate a validated AGER/OKF AgentGraph into a Claude Code plugin (skills, agents, commands, hooks).",
+  "version": "0.2.0",
+  "description": "Translate a validated AGER/OKF AgentGraph into a multi-host plugin (Agent Plugins 1.0, Claude Code, Grok Build, Codex, Cursor).",
   "author": {"name": "Rick Hightower", "url": "https://github.com/RichardHightower"},
   "homepage": "https://github.com/SpillwaveSolutions/claude-code-ager",
   "repository": "https://github.com/SpillwaveSolutions/claude-code-ager",
   "license": "MIT",
-  "keywords": ["ager", "okf", "claude-code", "codegen", "translator"]
+  "keywords": ["ager", "okf", "claude-code", "grok-build", "codex", "cursor", "agent-plugins", "translator"],
+  "extensions": {"com.spillwave.ager": {"ager_version": "0.3.0", "kind": "translator", "title": "AGER → multi-host plugin"}}
 }

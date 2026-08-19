@@ -1,9 +1,11 @@
 # AGENTS.md — claude-code-ager
 
-A **translator**. It does not author AGER graphs (`okf-agent-graph`).
-It compiles a validated AGER bundle into a Claude Code plugin.
+Multi-host translator. Author graphs with `okf-agent-graph`.
 
-- `/ager-to-claude-code`
-- `python3 scripts/emit.py --bundle path/to/ager --out ./generated/claude-code`
+- Agent Plugins 1.0: root `plugin.json` + `skills/`
+- Claude Code: `.claude-plugin/`
+- Grok Build: Claude layout + `.grok-plugin/`
+- Codex: `.codex-plugin/`
+- Cursor: `hosts/cursor/SKILL.md` — see `docs/CURSOR.md`
 
-Never claim the emitted plugin is production-ready without tests.
+`/ager-to-claude-code` · `$ager-to-claude-code` · `python3 scripts/emit.py`

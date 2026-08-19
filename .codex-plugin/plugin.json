@@ -1,0 +1,21 @@
+{
+  "name": "claude-code-ager",
+  "version": "0.2.0",
+  "description": "Compile a portable AGER AgentGraph into a multi-host plugin ($ager-to-claude-code, $ager-run).",
+  "author": {"name": "Rick Hightower", "url": "https://github.com/RichardHightower"},
+  "homepage": "https://github.com/SpillwaveSolutions/claude-code-ager",
+  "repository": "https://github.com/SpillwaveSolutions/claude-code-ager",
+  "license": "MIT",
+  "keywords": ["ager", "okf", "codex", "claude-code", "cursor", "translator"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "AGER → multi-host",
+    "shortDescription": "Compile AGER graphs for Claude, Grok, Codex, Cursor",
+    "developerName": "Spillwave Solutions",
+    "category": "Developer Tools",
+    "capabilities": ["Read", "Write"],
+    "websiteURL": "https://github.com/SpillwaveSolutions/claude-code-ager",
+    "defaultPrompt": ["Compile this AGER graph into a multi-host plugin.", "Run $ager-to-claude-code. Prefer scripts/emit.py."],
+    "brandColor": "#4F46E5"
+  }
+}

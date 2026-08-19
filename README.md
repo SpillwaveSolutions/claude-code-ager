@@ -1,34 +1,31 @@
 # claude-code-ager
 
-AGER → **Claude Code** translator plugin.
+AGER translator. Compiles a validated bundle into **one tree** every host can load.
 
-Does **not** author graphs. Author and validate with
-[`okf-agent-graph`](https://github.com/SpillwaveSolutions/okf-agent-graph).
-This plugin compiles a validated bundle into a Claude Code plugin
-(skills, agents, commands, hook notes).
+A host gets a manifest, never a fork. See [docs/HOSTS.md](docs/HOSTS.md).
+
+| Host | Reads |
+| --- | --- |
+| **Agent Plugins 1.0** | [`plugin.json`](plugin.json) + `skills/` |
+| **Claude Code** | `.claude-plugin/` |
+| **Grok Build** | Claude layout (zero-config) + `.grok-plugin/` |
+| **Codex** | `.codex-plugin/` (`$ager-to-claude-code`) |
+| **Cursor** | Agent Plugins 1.0 + [hosts/cursor/SKILL.md](hosts/cursor/SKILL.md) |
 
 ## Install
 
 ```bash
 claude plugin marketplace add SpillwaveSolutions/claude-code-ager
 claude plugin install claude-code-ager@claude-code-ager-marketplace
+
+codex plugin marketplace add SpillwaveSolutions/claude-code-ager
 ```
 
-Grok Build loads the Claude plugin layout with zero extra config.
-
-## Use
-
-```
-/ager-to-claude-code
-```
-
-or:
+Cursor: `/plugin install claude-code-ager` — see [docs/CURSOR.md](docs/CURSOR.md).
 
 ```bash
-python3 scripts/emit.py --bundle path/to/sample-ager --out ./generated/claude-code
+python3 scripts/emit.py --bundle path/to/sample-ager --out ./generated
 ```
-
-Sibling compiler: [`ager-translators`](https://github.com/SpillwaveSolutions/ager-translators).
 
 ## License
 
