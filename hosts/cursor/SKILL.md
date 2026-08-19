@@ -1,13 +1,13 @@
 ---
 name: cursor-claude-code-ager
-description: Bind a Cursor agent (including Grok Bot cloud sessions) to the AGER translator. Cursor loads Agent Plugins 1.0 (plugin.json + skills/).
+description: Bind a Cursor agent to claude-code-ager. Compile AGER graphs. Do not author graphs.
 ---
 
 # Cursor / claude-code-ager
 
-Follow `docs/CURSOR.md`.
+Follow `docs/CURSOR.md` and `docs/HOSTS.md`.
 
-1. Identity: `cursor/claude-code-ager`
-2. Cursor reads root `plugin.json` + `skills/`. No Cursor-only fork.
+1. Identity: `cursor/claude-code-ager`.
+2. Local Cursor may `/plugin install claude-code-ager`.
 3. Compile with `python3 scripts/emit.py --bundle <AGER> --out <OUT>`.
-4. Never document a private remote.
+4. Never invent agents. Never write a new AGER graph (that is `okf-agent-graph`).

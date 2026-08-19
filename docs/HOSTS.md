@@ -1,11 +1,16 @@
-# Hosts — one tree, many manifests
+# Host matrix
 
-A host gets a **manifest**, never a fork. Same rule as `okf-agent-graph`.
+`claude-code-ager` is one plugin, five install surfaces. Skills live once under `skills/`.
 
-| Host | What it reads |
-| --- | --- |
-| **Agent Plugins 1.0** (Cursor, Copilot, VS Code, Kiro, ChatGPT) | root `plugin.json` + `skills/` |
-| **Claude Code** | `.claude-plugin/` |
-| **Grok Build** | Claude layout (zero-config) + `.grok-plugin/` |
-| **Codex** | `.codex-plugin/` + `$` commands |
-| **Cursor** | Agent Plugins 1.0 + `hosts/cursor/SKILL.md` |
+| Host | Manifest | Install |
+| --- | --- | --- |
+| Agent Plugins 1.0 | `plugin.json` | any host that reads agent-plugins.org |
+| Claude Code | `.claude-plugin/plugin.json` + `marketplace.json` | `claude plugin marketplace add SpillwaveSolutions/claude-code-ager` |
+| Grok Build | `.grok-plugin/marketplace.json` (Claude layout is zero-config) | drop into workspace / Claude marketplace |
+| Codex | `.codex-plugin/plugin.json` | `codex plugin marketplace add SpillwaveSolutions/claude-code-ager` |
+| Cursor | `.cursor-plugin/plugin.json` + `.cursor/rules/` | `/plugin install claude-code-ager` |
+
+Command on Claude/Grok: `/ager-to-claude-code`
+Command on Codex: `$ager-to-claude-code`
+
+Depends on `okf-agent-graph` for author/validate. This plugin only compiles.

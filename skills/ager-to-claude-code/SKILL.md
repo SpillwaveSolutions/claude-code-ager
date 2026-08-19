@@ -29,7 +29,16 @@ This plugin **compiles**. It does not author AGER. Authoring is `okf-agent-graph
 python3 ${CLAUDE_PLUGIN_ROOT}/scripts/emit.py --bundle <AGER_ROOT> --out <OUT>
 ```
 
-4. Report written paths. Never claim production-ready without tests.
+If `CLAUDE_PLUGIN_ROOT` is unset, resolve `scripts/emit.py` relative to this plugin checkout.
+
+4. Report written paths. Tell the user how to install the **emitted** plugin:
+
+```bash
+claude plugin marketplace add <OUT>
+claude plugin install <graph-id>@<marketplace>
+```
+
+5. Never claim production-ready without tests. LoopPolicy price/deadline are documented in `ager-run`, not enforced by Claude Code itself.
 
 ## References
 

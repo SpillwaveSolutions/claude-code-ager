@@ -1,21 +1,42 @@
 {
   "name": "claude-code-ager",
-  "version": "0.2.0",
-  "description": "Compile a portable AGER AgentGraph into a multi-host plugin ($ager-to-claude-code, $ager-run).",
-  "author": {"name": "Rick Hightower", "url": "https://github.com/RichardHightower"},
+  "version": "0.1.0",
+  "description": "Translate a validated AGER/OKF AgentGraph into a Claude Code plugin (skills, agents, commands, hooks). Multi-host: Claude Code, Grok Build, Codex, Cursor, Agent Plugins 1.0.",
+  "author": {
+    "name": "Rick Hightower",
+    "url": "https://github.com/RichardHightower"
+  },
   "homepage": "https://github.com/SpillwaveSolutions/claude-code-ager",
   "repository": "https://github.com/SpillwaveSolutions/claude-code-ager",
   "license": "MIT",
-  "keywords": ["ager", "okf", "codex", "claude-code", "cursor", "translator"],
+  "keywords": [
+    "ager",
+    "okf",
+    "claude-code",
+    "grok-build",
+    "codex",
+    "cursor",
+    "agent-plugins",
+    "codegen",
+    "translator",
+    "multi-agent"
+  ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "AGER → multi-host",
-    "shortDescription": "Compile AGER graphs for Claude, Grok, Codex, Cursor",
+    "displayName": "claude-code-ager",
+    "shortDescription": "Translate a validated AGER/OKF AgentGraph into a Claude Code plugin (skills, agents, commands, hooks). Multi-host: Claude Code, Grok Build, Codex, Cursor, Agent Plugins 1.0.",
+    "longDescription": "Translate a validated AGER/OKF AgentGraph into a Claude Code plugin (skills, agents, commands, hooks). Multi-host: Claude Code, Grok Build, Codex, Cursor, Agent Plugins 1.0.",
     "developerName": "Spillwave Solutions",
     "category": "Developer Tools",
-    "capabilities": ["Read", "Write"],
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
     "websiteURL": "https://github.com/SpillwaveSolutions/claude-code-ager",
-    "defaultPrompt": ["Compile this AGER graph into a multi-host plugin.", "Run $ager-to-claude-code. Prefer scripts/emit.py."],
-    "brandColor": "#4F46E5"
+    "defaultPrompt": [
+      "Run /ager-to-claude-code on the AGER bundle in this workspace.",
+      "Compile the graph. Do not author a new AGER graph."
+    ],
+    "brandColor": "#D97706"
   }
 }
