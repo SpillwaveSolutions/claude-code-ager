@@ -1,6 +1,6 @@
 {
   "name": "claude-code-ager",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Translate a validated AGER/OKF AgentGraph into a Claude Code plugin (skills, agents, commands, hooks). Multi-host: Claude Code, Grok Build, Codex, Cursor, Agent Plugins 1.0.",
   "author": {
     "name": "Rick Hightower",
@@ -19,7 +19,9 @@
     "agent-plugins",
     "codegen",
     "translator",
-    "multi-agent"
+    "multi-agent",
+    "worklog",
+    "wiki-ticket-sdd"
   ],
   "skills": "./skills/",
   "interface": {

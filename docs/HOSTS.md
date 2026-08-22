@@ -14,3 +14,7 @@ Command on Claude/Grok: `/ager-to-claude-code`
 Command on Codex: `$ager-to-claude-code`
 
 Depends on `okf-agent-graph` for author/validate. This plugin only compiles.
+
+## WikiTicket SDD
+
+Track work with the worklog plugin (`SpillwaveSolutions/wiki_ticket_sdd`). See [WORKLOG.md](WORKLOG.md).
